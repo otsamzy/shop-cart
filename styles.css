@@ -1,0 +1,248 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(130deg,#35a1cc 6%, #4e0887 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  p{
+    
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h2, h3{
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  
+
+  .wrapper{width: 330px;
+background-color: white;
+padding: 2rem;
+border-radius: 20px;
+box-shadow: 0 5px 15px rgba(0,0,0,.2);
+overflow: hidden;
+
+}
+
+.wrapper .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper .header .logo img{
+    width: 40px;
+    object-fit: cover;
+}
+
+.wrapper .header .add-to-cart-icon svg{
+    width: 20px;
+    fill:#626769 ;
+    stroke: #626769;
+}
+
+.wrapper .image-container{
+
+height: 230px;
+position: relative;
+overflow: hidden;
+}
+
+.wrapper .image-container .shoe{
+    width: 100%;
+    position: absolute;
+    object-fit: contain;
+    transform: rotate(34deg);
+    top: -25px;
+    opacity: 0;
+    transition: all .3s linear;
+ 
+}
+
+.wrapper .image-container .shoe.active {
+    opacity: 1;
+    
+}
+
+.wrapper .shoe-details h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #626769;
+}
+
+.wrapper .shoe-details span{
+    font-size: inherit;
+    color: red;
+}
+
+.wrapper .shoe-details p{
+    font-size: 1.2rem;
+    color: #626769;
+    text-align: justify;
+    margin-bottom: 1rem;
+
+}
+
+
+.wrapper .shoe-details .star-rating svg{
+    width: 20px;
+    fill: #626769;
+}
+
+.wrapper .price-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .price-container .color-select{
+    display: flex;
+    align-items: center;
+}
+.wrapper .price-container .color-select p{
+    font-size: 1.6rem; 
+    color: #626769;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+.wrapper .price-container .color-select  .colors-option{
+display: flex;
+}
+
+.wrapper .price-container .color-select .colors-option .color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(14, 14, 71);
+    margin: 0 4px;
+    position: relative;
+
+}
+
+.wrapper .price-container .color-select .colors-option .green{
+    background-color: green;
+ 
+}
+.wrapper .price-container .color-select .colors-option .red{
+    background-color: red;
+   
+}
+
+.wrapper .price-container .color-select .colors-option .blue.active::before{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+  border: 2px solid rgb(14, 14, 71);
+   content: '';
+   border-radius: 50%;
+  
+   animation: keyseach 1s ease-in infinite;
+
+
+}
+.wrapper .price-container .color-select .colors-option .green.active::before{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+  border: 2px solid green;
+   content: '';
+   border-radius: 50%;
+  
+   animation: keyseach 1s ease-in infinite;
+
+
+}
+.wrapper .price-container .color-select .colors-option .red.active::before{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+  border: 2px solid red;
+   content: '';
+   border-radius: 50%;
+  
+   animation: keyseach 1s ease-in infinite;
+
+
+}
+
+.wrapper .price-container .price h3{
+    font-size: 2rem;
+    color: #626769;
+}
+
+.wrapper .price-container .price p{
+    font-size: 1rem;
+    color: #626769;
+}
+
+.wrapper .button{
+  
+    width: 100%;
+    margin-top: 1.5rem;
+   
+    text-align: center ;
+    border-radius: 30px;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+button{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+align-self: center;
+font-size: 2rem;
+font-weight: 600;
+text-transform: capitalize;
+color: aliceblue;
+letter-spacing: 1px;
+position: relative;
+height: 100%;
+cursor: pointer;
+
+}
+.btn-over_lay{
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(135deg,#35a1cc, #4e0887,#35a1cc, #4e0887 );
+    left: -100%;
+    border-radius:30px;
+    transition: all .5s ease;
+   
+}
+
+.button:hover .btn-over_lay{
+    left: 0;
+}
+
+
+@keyframes keyseach{
+    0%{
+        opacity: 1;
+        transform: scale(1) translate(-10%, -10%);
+   top: 10%;
+   left: 5%;
+    }
+100%{
+    opacity: 0;
+    transform: scale(1.5) translate(-10%, -10%);
+    top: 10%;
+    left: 5%;
+}
+}
+
+
